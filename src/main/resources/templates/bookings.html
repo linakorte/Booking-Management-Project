@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Bookings</title>
+    <title>booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
-The table of bookings will be displayed here
+<div class="col-8 mx-auto">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Visitor</th>
+            <th scope="col">Arrival Date</th>
+            <th scope="col">Departure Date</th>
+            <th scope="col">Length of Stay</th>
+            <th scope="col">Amount of People</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="booking : ${bookings}">
+            <th scope="row" th:text="${booking.id}">1</th>
+            <td th:text="${booking.visitor}">@mdo</td>
+            <td th:text="${booking.arrivalDate}">@mdo</td>
+            <td th:text="${{booking.departureDate}}">@mdo</td>
+            <td th:text="${{booking.lengthOfStay}}">@mdo</td>
+            <td th:text="${{booking.amountOfPeople}}">@mdo</td>
+        </tr>
+        </tbody>
+    </table>
+    <form th:object="${booking}" method="post">
+        <div class="form-group">
+            <label for="visitor">Visitor Name</label>
+            <input type="text" class="form-control" id="visitor" th:field="*{visitor}" aria-describedby="visitorHelp" placeholder="Enter visitor's name">
+        </div>
+        <div class="form-group">
+            <label for="arrivalDate">Arrival Date</label>
+            <input type="date" class="form-control" id="arrivalDate" th:field="*{arrivalDate}" aria-describedby="arrivalDateHelp" placeholder="Enter arrival date">
+        </div>
+        <div class="form-group">
+            <label for="departureDate">Departure Date</label>
+            <input type="date" class="form-control" id="departureDate" th:field="*{departureDate}" aria-describedby="departureDateHelp" placeholder="Enter departure date">
+        </div>
+        <div class="form-group">
+            <label for="lengthOfStay">Length of Stay</label>
+            <input type="number" class="form-control" id="lengthOfStay" th:field="*{lengthOfStay}" aria-describedby="lengthOfStayHelp" placeholder="Enter length of stay">
+        </div>
+        <div class="form-group">
+            <label for="amountOfPeople">Amount of People</label>
+            <input type="number" class="form-control" id="amountOfPeople" th:field="*{amountOfPeople}" placeholder="Enter Amount of people">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Booking</button>
+    </form>
+</div>
+
 </body>
 </html>

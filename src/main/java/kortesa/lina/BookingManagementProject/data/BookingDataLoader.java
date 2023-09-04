@@ -24,7 +24,7 @@ public class BookingDataLoader implements ApplicationRunner{
     public void run(ApplicationArguments args) throws Exception {
         if (bookingRepository.count() == 0) {
             List<Booking> bookings = List.of(
-                    new Booking(null, "Dim Zaf", LocalDate.of(2023,06,30), LocalDate.of(2023, 7, 9), 9, 6)
+//                    new Booking(null, "Dim Zaf", LocalDate.of(2023,06,30), LocalDate.of(2023, 7, 9), 9, 6)
             );
             bookingRepository.saveAll(bookings);
         }

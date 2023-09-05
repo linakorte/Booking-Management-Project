@@ -3,12 +3,14 @@ package kortesa.lina.BookingManagementProject.web.controller;
 import jakarta.validation.Valid;
 import kortesa.lina.BookingManagementProject.biz.model.Booking;
 import kortesa.lina.BookingManagementProject.data.BookingRepository;
+import kortesa.lina.BookingManagementProject.data.FileStorageRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.awt.print.Book;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +18,13 @@ import java.util.Optional;
 @RequestMapping("/bookings")
 public class BookingsController {
     private BookingRepository bookingRepository;
+    private FileStorageRepository fileStorageRepository;
 
-    public BookingsController(BookingRepository bookingRepository) {
+    public BookingsController(BookingRepository bookingRepository,
+                              FileStorageRepository fileStorageRepository) {
+
         this.bookingRepository = bookingRepository;
+        this.fileStorageRepository = fileStorageRepository;
     }
 
     @ModelAttribute("bookings")
@@ -37,8 +43,9 @@ public class BookingsController {
     }
 
     @PostMapping
-    public String saveBooking(@Valid Booking booking, Errors errors) {
+    public String saveBooking(@Valid Booking booking, Errors errors, @RequestParam("docFilename") MultipartFile docFile) throws IOException {
         if (!errors.hasErrors()) {
+            fileStorageRepository.save(docFile.getOriginalFilename(),docFile.getInputStream());
             bookingRepository.save(booking);
             return "redirect:bookings";
         }

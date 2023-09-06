@@ -35,16 +35,12 @@ List the main features of your web app. You can use bullet points or a table for
 
 Describe how to set up and run your web app locally. Include any prerequisites, step-by-step installation instructions, and configuration details.
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/your-webapp.git
 
-# Install dependencies
-npm install
+## Technologies Used
 
-# Configure environment variables
-cp .env.example .env
-# Edit .env file with your configuration settings
-
-# Run the application
-npm start
+- HTML, CSS, JavaScript
+- Bootstrap
+- MongoDB
+- Thymeleaf
+- Java
+- Spring Framework, Spring MVC

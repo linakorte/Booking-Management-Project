@@ -18,7 +18,7 @@ The Booking Management web app was designed and deployed to facilitate the manag
 The Booking Management web app was designed and deployed targeting to facilitate the management of residences bookings which are made through various booking platforms.
 It offers a panel for viewing the list of the bookings history including the upcoming bookings.
 
-With the Booking Form provided, the user can add new bookings, modify or delete existing bbokings. Also, it is possible to add image of an ID document for each record.
+The user can add new bookings, modify or delete existing bookings. Also, it is possible to add image of an ID document for each record.
 
 The info regarding the Visitor's Name, the Arrival and Departure Dates and the Amount of People are manually inserted by the end user. The ID and the Length of Stay is auto-calculated.
 

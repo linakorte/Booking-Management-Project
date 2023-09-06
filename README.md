@@ -7,11 +7,8 @@ The Booking Management web app was designed and deployed to facilitate the manag
 - [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
@@ -28,12 +25,18 @@ The application offers multilanguage environment: english, greek, french, german
 
 List the main features of your web app. You can use bullet points or a table format. For example:
 
-- Booking management
-- Document upload and viewing
+- Bookings List: View the booking list with the uploaded images
+- Booking Form: Manage the booking list by adding, modifying, deleting bookings
 
 ## Getting Started
 
+!!!!! To-Do !!!!! 
 Describe how to set up and run your web app locally. Include any prerequisites, step-by-step installation instructions, and configuration details.
+
+## Screenshots
+
+!!!!! To-Do !!!!!
+Add Screenshots
 
 
 ## Technologies Used

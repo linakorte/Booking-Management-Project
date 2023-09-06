@@ -43,7 +43,7 @@ Add Screenshots
 
 - HTML, CSS, JavaScript
 - Bootstrap
-- MongoDB
+- H2 Database
 - Thymeleaf
 - Java
 - Spring Framework, Spring MVC

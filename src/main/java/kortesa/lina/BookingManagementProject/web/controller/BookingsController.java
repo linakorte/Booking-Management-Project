@@ -4,6 +4,9 @@ import jakarta.validation.Valid;
 import kortesa.lina.BookingManagementProject.biz.model.Booking;
 import kortesa.lina.BookingManagementProject.data.BookingRepository;
 import kortesa.lina.BookingManagementProject.data.FileStorageRepository;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -17,6 +20,9 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/bookings")
 public class BookingsController {
+    public static final String DISPO = """
+            attachment; filename="%s"
+            """;
     private BookingRepository bookingRepository;
     private FileStorageRepository fileStorageRepository;
 
@@ -40,6 +46,14 @@ public class BookingsController {
     @GetMapping
     public String showBookingsPage() {
         return "bookings";
+    }
+
+    @GetMapping("/images/{resource}")
+    public ResponseEntity<Resource> getResource(@PathVariable String resource) {
+        return ResponseEntity
+                .ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, String.format(DISPO, resource))
+                .body(fileStorageRepository.findByName(resource));
     }
 
     @PostMapping

@@ -19,14 +19,13 @@ The user can add new bookings, modify or delete existing bookings. Also, it is p
 
 The info regarding the Visitor's Name, the Arrival and Departure Dates and the Amount of People are manually inserted by the end user. The ID and the Length of Stay is auto-calculated.
 
-The application offers multilanguage environment: english, greek, french, german .
+The application offers multilanguage environment: english, greek, french, german.
 
 ## Features
 
-List the main features of your web app. You can use bullet points or a table format. For example:
-
 - Bookings List: View the booking list with the uploaded images
 - Booking Form: Manage the booking list by adding, modifying, deleting bookings
+- Application available in multiple languages: english, greek, french, german
 
 ## Getting Started
 

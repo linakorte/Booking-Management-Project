@@ -28,8 +28,11 @@ The application offers multilanguage environment: english, greek, french, german
 
 ## Screenshots
 
-!!!!! To-Do !!!!!
-Add Screenshots
+![Overview](https://user-images.githubusercontent.com/71251582/267261840-44c4df15-8546-4152-8d0e-0f05ad220e25.png)
+
+![Dates Error](https://user-images.githubusercontent.com/71251582/267262019-6448aba2-999a-4710-bd63-b1e4bae84f18.png)
+
+![Amount Error](https://user-images.githubusercontent.com/71251582/267262146-70447792-1d29-442a-bb3b-2e9f73d060b9.png)
 
 
 ## Technologies Used

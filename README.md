@@ -37,6 +37,6 @@ Add Screenshots
 - HTML, CSS, JavaScript
 - Bootstrap
 - Java
-- Spring Framework, Spring MVC
+- Spring Framework, Spring MVC, Spring Data
 - Thymeleaf
 - H2 Database

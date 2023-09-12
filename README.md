@@ -40,6 +40,6 @@ The application offers multilanguage environment: english, greek, french, german
 - HTML, CSS, JavaScript
 - Bootstrap
 - Java
-- Spring Framework, Spring MVC, Spring Data
+- Spring Framework, Spring MVC, Spring Data, Hibernate
 - Thymeleaf
 - H2 Database
